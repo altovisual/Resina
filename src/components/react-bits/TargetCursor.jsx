@@ -12,6 +12,10 @@ const TargetCursor = ({
     const targetRef = useRef(null);
 
     useEffect(() => {
+        // Desactivar en dispositivos móviles/táctiles
+        const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
+        if (isTouchDevice) return;
+
         if (hideDefaultCursor) {
             document.body.style.cursor = 'none';
             const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
@@ -129,6 +133,11 @@ const TargetCursor = ({
                   mix-blend-mode: difference;
                   transform: translate(-50%, -50%);
                   will-change: transform;
+                }
+                @media (pointer: coarse) {
+                  .target-cursor-wrapper {
+                    display: none;
+                  }
                 }
                 .target-cursor-dot {
                   position: absolute;

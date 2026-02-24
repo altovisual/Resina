@@ -8,7 +8,7 @@ import { Zap } from 'lucide-react';
 
 const Hero = () => {
     return (
-        <section className="relative w-full min-h-screen flex items-center justify-center px-4 md:px-20 overflow-hidden pt-20 pb-10 bg-black">
+        <section className="relative w-full min-h-screen flex items-end md:items-center justify-center px-4 md:px-20 overflow-hidden pt-40 pb-24 md:pt-20 md:pb-10 bg-black">
             {/* Imagen de fondo 3.png con un overlay que equilibra la luz */}
             <div className="absolute inset-0 z-0 select-none">
                 <img
