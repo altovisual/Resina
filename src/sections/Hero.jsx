@@ -5,7 +5,6 @@ import GradientText from '../components/react-bits/GradientText';
 import { motion } from 'framer-motion';
 import bgHero from '../assets/4.png';
 import bgMobile from '../assets/6.png';
-import modelo1 from '../assets/modelo1.png';
 import { Zap } from 'lucide-react';
 
 const Hero = () => {
@@ -90,25 +89,8 @@ const Hero = () => {
                     </div>
                 </div>
 
-                {/* Bloque Derecho: Imagen del Sujeto (Oculto temporalmente) */}
-                {/*
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.9, x: 50 }}
-                    animate={{ opacity: 1, scale: 1, x: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="flex-1 relative hidden md:flex justify-end items-end translate-y-16 lg:translate-y-32"
-                >
-                    <div className="relative w-full aspect-[4/5] max-w-2xl md:translate-x-12 lg:translate-x-20">
-                        <div className="absolute inset-0 bg-primary/20 blur-[150px] rounded-full scale-125" />
-
-                        <img
-                            src={modelo1}
-                            alt="Instructor"
-                            className="relative z-10 w-full h-full object-contain object-bottom drop-shadow-[0_20px_60px_rgba(0,255,187,0.4)] scale-110 lg:scale-[1.45] origin-bottom"
-                        />
-                    </div>
-                </motion.div>
-                */}
+                {/* Bloque Derecho (Espacio reservado) */}
+                <div className="flex-1 hidden md:block" />
             </div>
 
             {/* Indicador de scroll */}
