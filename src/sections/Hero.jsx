@@ -4,29 +4,38 @@ import Magnet from '../components/react-bits/Magnet';
 import GradientText from '../components/react-bits/GradientText';
 import { motion } from 'framer-motion';
 import bgHero from '../assets/4.png';
+import bgMobile from '../assets/6.png';
+import modelo1 from '../assets/modelo1.png';
 import { Zap } from 'lucide-react';
 
 const Hero = () => {
     return (
-        <section className="relative w-full min-h-screen flex items-end md:items-center justify-center px-4 md:px-20 overflow-hidden pt-40 pb-24 md:pt-20 md:pb-10 bg-black">
-            {/* Imagen de fondo 3.png con un overlay que equilibra la luz */}
-            <div className="absolute inset-0 z-0 select-none">
+        <section className="relative w-full min-h-screen flex items-center md:items-end justify-center px-4 md:px-20 pt-40 pb-24 md:pt-20 md:pb-0 bg-black">
+            {/* Imagen de fondo con overlay - con overflow-hidden para contener el background */}
+            <div className="absolute inset-0 z-0 select-none overflow-hidden">
+                {/* Imagen para Desktop */}
                 <img
                     src={bgHero}
-                    alt="Background"
-                    className="w-full h-full object-cover opacity-40 scale-105"
+                    alt="Background Desktop"
+                    className="hidden md:block w-full h-full object-cover opacity-100 scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black" />
-                <div className="absolute inset-0 bg-primary/5" />
+                {/* Imagen para Mobile/Tablet */}
+                <img
+                    src={bgMobile}
+                    alt="Background Mobile"
+                    className="block md:hidden w-full h-full object-cover opacity-100 scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent hidden md:block" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black md:hidden" />
             </div>
 
-            <div className="relative z-10 max-w-7xl w-full flex flex-col items-center justify-center text-center">
+            <div className="relative z-10 max-w-7xl w-full flex flex-col md:flex-row items-center md:items-end justify-between gap-12 h-full">
 
-                {/* Contenido Centrado sobre el fondo */}
-                <div className="max-w-4xl flex flex-col items-center">
+                {/* Bloque Izquierdo: Información */}
+                <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left max-w-2xl md:mb-48">
                     <motion.div
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
                         className="bg-primary/10 border border-primary/30 px-5 py-2 rounded-full text-primary text-xs font-black mb-8 tracking-[0.3em] uppercase inline-flex items-center gap-2"
                     >
                         <span className="relative flex h-2 w-2">
@@ -36,17 +45,17 @@ const Hero = () => {
                         Inscripciones Abiertas - 2026
                     </motion.div>
 
-                    <div className="mb-10 w-full flex flex-col items-center">
+                    <div className="mb-8 w-full">
                         <SplitText
                             text="DOMINA EL ARTE DE LA RESINA"
-                            className="text-2xl md:text-3xl font-black text-white leading-[0.85] tracking-tighter mb-6"
+                            className="text-2xl md:text-3xl lg:text-4xl font-black text-white leading-[0.85] tracking-tighter mb-4"
                         />
-                        <div className="h-1 w-32 bg-primary mb-8 shadow-[0_0_15px_rgba(0,255,187,0.5)]" />
+                        <div className="h-1 w-32 bg-primary mb-6 shadow-[0_0_15px_rgba(0,255,187,0.5)] mx-auto md:mx-0" />
                         <GradientText
                             colors={["#ffffff", "#00FFBB", "#00CC96", "#00FFBB", "#ffffff"]}
                             animationSpeed={6}
                             showBorder={false}
-                            className="text-4xl md:text-7xl font-black italic uppercase tracking-tighter"
+                            className="text-4xl md:text-6xl lg:text-8xl font-black italic uppercase tracking-tighter block"
                         >
                             Resina Master Pro
                         </GradientText>
@@ -55,8 +64,8 @@ const Hero = () => {
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.8 }}
-                        className="text-gray-300 text-xl md:text-3xl max-w-3xl mb-14 leading-relaxed font-bold text-center mx-auto"
+                        transition={{ delay: 0.4 }}
+                        className="text-gray-300 text-lg md:text-xl lg:text-2xl mb-12 leading-relaxed font-bold"
                     >
                         Aprende el método exacto para facturar con piezas exclusivas, <span className="text-white underline decoration-primary decoration-4 underline-offset-8">desde cero</span> y vive de tu pasión creativa.
                     </motion.p>
@@ -74,19 +83,39 @@ const Hero = () => {
                             </motion.button>
                         </Magnet>
 
-                        <div className="flex flex-col items-center text-gray-400">
+                        <div className="flex flex-col items-center md:items-start text-gray-400">
                             <span className="text-white font-bold text-sm uppercase">Próximo Lanzamiento</span>
                             <span className="text-xs tracking-widest font-black">Cupos Muy Limitados</span>
                         </div>
                     </div>
                 </div>
+
+                {/* Bloque Derecho: Imagen del Sujeto (Oculto temporalmente) */}
+                {/*
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9, x: 50 }}
+                    animate={{ opacity: 1, scale: 1, x: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="flex-1 relative hidden md:flex justify-end items-end translate-y-16 lg:translate-y-32"
+                >
+                    <div className="relative w-full aspect-[4/5] max-w-2xl md:translate-x-12 lg:translate-x-20">
+                        <div className="absolute inset-0 bg-primary/20 blur-[150px] rounded-full scale-125" />
+
+                        <img
+                            src={modelo1}
+                            alt="Instructor"
+                            className="relative z-10 w-full h-full object-contain object-bottom drop-shadow-[0_20px_60px_rgba(0,255,187,0.4)] scale-110 lg:scale-[1.45] origin-bottom"
+                        />
+                    </div>
+                </motion.div>
+                */}
             </div>
 
             {/* Indicador de scroll */}
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 2 }}
+                transition={{ delay: 1.5 }}
                 className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden lg:block z-20"
             >
                 <div className="w-6 h-10 border-2 border-primary/30 rounded-full flex justify-center pt-2">
