@@ -9,7 +9,7 @@ import { Zap } from 'lucide-react';
 
 const Hero = () => {
     return (
-        <section className="relative w-full min-h-screen flex items-start md:items-end justify-center px-4 md:px-20 pt-64 pb-24 md:pt-20 md:pb-0 bg-black">
+        <section className="relative w-full min-h-screen flex items-center md:items-end justify-center px-4 md:px-20 pt-20 pb-24 md:pb-0 bg-black">
             {/* Imagen de fondo con overlay - con overflow-hidden para contener el background */}
             <div className="absolute inset-0 z-0 select-none overflow-hidden">
                 {/* Imagen para Desktop */}
@@ -31,13 +31,15 @@ const Hero = () => {
             <div className="relative z-10 max-w-7xl w-full flex flex-col md:flex-row items-center md:items-end justify-between gap-12 h-full">
 
                 {/* Bloque Izquierdo: Información */}
-                <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left max-w-2xl md:mb-48 w-full">
+                <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left max-w-2xl md:mb-48 w-full mt-40 md:mt-0">
 
                     <div className="mb-8 w-full">
-                        <SplitText
-                            text="DOMINA EL ARTE DE LA RESINA"
-                            className="text-2xl md:text-3xl lg:text-4xl font-black text-white leading-[0.85] tracking-tighter mb-4 text-center md:text-left"
-                        />
+                        <div className="flex justify-center md:justify-start">
+                            <SplitText
+                                text="DOMINA EL ARTE DE LA RESINA"
+                                className="text-lg md:text-3xl lg:text-4xl font-black text-white leading-[0.85] tracking-tighter mb-4"
+                            />
+                        </div>
                         <div className="h-1 w-32 bg-primary mb-6 shadow-[0_0_15px_rgba(0,255,187,0.5)] mx-auto md:mx-0" />
                         <GradientText
                             colors={["#ffffff", "#00FFBB", "#00CC96", "#00FFBB", "#ffffff"]}
