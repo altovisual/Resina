@@ -5,6 +5,8 @@ import GradientText from '../components/react-bits/GradientText';
 import { motion } from 'framer-motion';
 import bgHero from '../assets/4.png';
 import bgMobile from '../assets/6.png';
+import solapeImg from '../assets/solape.png';
+import celImg from '../assets/cel.png';
 import { Zap } from 'lucide-react';
 
 const Hero = () => {
@@ -12,20 +14,34 @@ const Hero = () => {
         <section className="relative w-full min-h-screen flex items-center md:items-end justify-center px-4 md:px-20 pt-20 pb-24 md:pb-0 bg-black">
             {/* Imagen de fondo con overlay - con overflow-hidden para contener el background */}
             <div className="absolute inset-0 z-0 select-none overflow-hidden">
-                {/* Imagen para Desktop */}
+                {/* Capas de fondo base */}
                 <img
                     src={bgHero}
                     alt="Background Desktop"
                     className="hidden md:block w-full h-full object-cover opacity-100 scale-105"
                 />
-                {/* Imagen para Mobile/Tablet */}
                 <img
                     src={bgMobile}
                     alt="Background Mobile"
-                    className="block md:hidden w-full h-full object-cover opacity-100 scale-105"
+                    className="block md:hidden w-full h-full object-cover opacity-100 scale-100 object-[48%_center]"
                 />
+
+                {/* Degradados de oscurecimiento */}
                 <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent hidden md:block" />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black md:hidden" />
+
+                {/* Capa de Solape (Sujeto con iluminación original) - Desktop */}
+                <img
+                    src={solapeImg}
+                    alt="Sujeto Solape Desktop"
+                    className="absolute inset-0 w-full h-full object-cover z-10 scale-105 pointer-events-none hidden md:block"
+                />
+                {/* Capa de Solape (Sujeto con iluminación original) - Mobile */}
+                <img
+                    src={celImg}
+                    alt="Sujeto Solape Mobile"
+                    className="absolute inset-0 w-full h-full object-cover z-10 scale-100 pointer-events-none block md:hidden object-[48%_center]"
+                />
             </div>
 
             <div className="relative z-10 max-w-7xl w-full flex flex-col md:flex-row items-center md:items-end justify-between gap-12 h-full">
@@ -37,7 +53,7 @@ const Hero = () => {
                         <div className="flex justify-center md:justify-start">
                             <SplitText
                                 text="DOMINA EL ARTE DE LA RESINA"
-                                className="text-lg md:text-3xl lg:text-4xl font-black text-white leading-[0.85] tracking-tighter mb-4"
+                                className="text-lg md:text-3xl lg:text-4xl font-black text-white leading-[0.85] tracking-tighter mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] md:drop-shadow-none"
                             />
                         </div>
                         <div className="h-1 w-32 bg-primary mb-6 shadow-[0_0_15px_rgba(0,255,187,0.5)] mx-auto md:mx-0" />
@@ -45,7 +61,7 @@ const Hero = () => {
                             colors={["#ffffff", "#00FFBB", "#00CC96", "#00FFBB", "#ffffff"]}
                             animationSpeed={6}
                             showBorder={false}
-                            className="text-4xl md:text-6xl lg:text-8xl font-black italic uppercase tracking-tighter block"
+                            className="text-4xl md:text-6xl lg:text-8xl font-black italic uppercase tracking-tighter block drop-shadow-[0_4px_6px_rgba(0,0,0,0.9)] md:drop-shadow-none"
                         >
                             Resina Master Pro
                         </GradientText>
@@ -55,7 +71,7 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
-                        className="text-gray-300 text-lg md:text-xl lg:text-2xl mb-12 leading-relaxed font-bold"
+                        className="text-white/90 md:text-gray-300 text-lg md:text-xl lg:text-2xl mb-12 leading-relaxed font-bold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] md:drop-shadow-none"
                     >
                         Aprende el método exacto para facturar con piezas exclusivas, <span className="text-white underline decoration-primary decoration-4 underline-offset-8">desde cero</span> y vive de tu pasión creativa.
                     </motion.p>
