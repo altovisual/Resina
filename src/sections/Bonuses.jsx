@@ -3,14 +3,9 @@ import SpotlightCard from '../components/react-bits/SpotlightCard';
 import { motion } from 'framer-motion';
 
 const bonuses = [
-    { title: "Bono 1", desc: "Proveedores de Resina", value: "$15" },
-    { title: "Bono 2", desc: "Moldes Caseros", value: "$10" },
-    { title: "Bono 3", desc: "Fotografía de Producto", value: "$20" },
-    { title: "Bono 4", desc: "Pack de Diseños", value: "$15" },
-    { title: "Bono 5", desc: "Comunidad VIP", value: "$25" },
-    { title: "Bono 6", desc: "Tabla de Precios", value: "$10" },
-    { title: "Bono 7", desc: "Certificado de Honor", value: "$30" },
-    { title: "Bono 8", desc: "Actualizaciones", value: "$100" }
+    { title: "Bono 1", desc: "COMO CALCULAR AHORRAR Y VENDER (FORMULA SIMPLE)", value: "$27" },
+    { title: "Bono 2", desc: "MUESTRA Y VENDE TU RESINA (FOTOGRAFIA)", value: "$37" },
+    { title: "Bono 3", desc: "CREA TU PROPIA MARCA DESDE 0 (CANVA)", value: "$47" }
 ];
 
 const Bonuses = () => {
@@ -18,10 +13,10 @@ const Bonuses = () => {
         <section className="py-20 bg-black px-4">
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Si accedes <span className="text-primary italic">HOY</span> Recibirás Estos 8 <br /> BONOS Totalmente Gratis!</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Si accedes <span className="text-primary italic">HOY</span> Recibirás Estos 3 <br /> BONOS Totalmente Gratis!</h2>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
                     {bonuses.map((b, i) => (
                         <SpotlightCard key={i} className="p-4 flex flex-col items-center text-center">
                             <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4 text-primary font-bold">

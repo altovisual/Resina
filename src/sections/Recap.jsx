@@ -6,7 +6,7 @@ import GradientText from '../components/react-bits/GradientText';
 const Recap = () => {
     const points = [
         "Aprenderás a tu propio ritmo, sin presiones y en tan solo 15 días obtendrás resultados increíbles.",
-        "Nuestro programa cuenta con más de 100 clases para que logres el objetivo de ser una experta en el mundo de la resina epóxica.",
+        "Nuestro programa cuenta con 58 clases para que logres el objetivo de ser una experta en el mundo de la resina epóxica.",
         "Contamos con una guía con el paso a paso que te ayudará a hacer más fácil tu proceso de aprendizaje.",
         "Garantía de satisfacción de 7 días. Si nuestro programa no cumple tus expectativas, te devolvemos el dinero."
     ];
@@ -45,7 +45,7 @@ const Recap = () => {
                                 <div className="space-y-4">
                                     <div className="flex items-center gap-3 text-white/50 text-sm italic font-bold">
                                         <Layers size={20} />
-                                        10 MÓDULOS + 8 BONOS
+                                        12 MÓDULOS, 58 CLASES + 3 BONOS
                                     </div>
                                     <div className="bg-primary/10 border border-primary/20 p-4 rounded-xl text-primary text-xs font-black uppercase tracking-widest text-center">
                                         Acceso de por vida
@@ -64,7 +64,7 @@ const Recap = () => {
                                 </div>
                                 <div className="text-black font-black leading-tight uppercase">
                                     <span className="text-[10px] block opacity-60">BONO EXCLUSIVO</span>
-                                    GUÍA DE PROVEEDORES
+                                    CÓMO CALCULAR Y VENDER
                                 </div>
                             </motion.div>
                         </div>

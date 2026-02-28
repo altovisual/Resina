@@ -12,8 +12,8 @@ const features = [
         img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=400" // Tech/Online access
     },
     {
-        title: "8 Bonos exclusivos",
-        description: "Accede a 8 bonos exclusivos que potencializará tus conocimientos.",
+        title: "3 Bonos exclusivos",
+        description: "Accede a 3 bonos exclusivos que potencializarán tus conocimientos.",
         icon: <Gift className="w-8 h-8 text-primary" />,
         img: "https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&q=80&w=400" // Gifts
     },
