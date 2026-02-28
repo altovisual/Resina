@@ -55,11 +55,11 @@ const Countdown = () => {
                 </div>
 
                 <div className="mb-4 relative z-10">
-                    <span className="text-primary text-lg md:text-xl font-bold line-through opacity-50 decoration-2 italic">Antes $2650 USD, ahora</span>
+                    <span className="text-primary text-lg md:text-xl font-bold line-through opacity-50 decoration-2 italic">Antes $672 USD, ahora</span>
                 </div>
 
                 <div className="flex items-center justify-center gap-2 mb-8 relative z-10">
-                    <span className="text-6xl md:text-8xl font-black text-primary italic tracking-tighter">$197</span>
+                    <span className="text-6xl md:text-8xl font-black text-primary italic tracking-tighter">$47</span>
                     <span className="text-2xl md:text-3xl font-bold text-primary mt-6 tracking-tight">USD</span>
                 </div>
 

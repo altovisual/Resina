@@ -63,7 +63,7 @@ const Hero = () => {
                             showBorder={false}
                             className="text-4xl md:text-6xl lg:text-8xl font-black italic uppercase tracking-tighter block drop-shadow-[0_4px_6px_rgba(0,0,0,0.9)] md:drop-shadow-none"
                         >
-                            Resina Master Pro
+                            Resina Express
                         </GradientText>
                     </div>
 

@@ -43,13 +43,13 @@ const Pricing = () => {
 
                                     <div className="mb-2">
                                         <span className="text-black/40 line-through text-lg md:text-xl font-medium decoration-black/30 decoration-2">
-                                            Antes $2650 USD
+                                            Antes $672 USD
                                         </span>
                                     </div>
 
                                     <div className="flex items-start justify-center mb-6">
                                         <span className="text-2xl md:text-3xl font-bold mt-2">$</span>
-                                        <span className="text-7xl md:text-8xl font-black tracking-tighter leading-none">197</span>
+                                        <span className="text-7xl md:text-8xl font-black tracking-tighter leading-none">47</span>
                                         <span className="text-xl md:text-2xl font-bold self-end mb-2 ml-2">USD</span>
                                     </div>
 

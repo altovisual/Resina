@@ -9,7 +9,7 @@ const faqs = [
     },
     {
         q: "¿Recibo algún certificado?",
-        a: "Sí, al finalizar todos los módulos recibirás un certificado de finalización de Resina Master Pro."
+        a: "Sí, al finalizar todos los módulos recibirás un certificado de finalización de Resina Express."
     },
     {
         q: "¿Cómo accedo al contenido?",

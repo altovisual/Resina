@@ -3,93 +3,121 @@ import ShinyText from '../components/react-bits/ShinyText';
 
 const modules = [
     {
-        title: "Módulo 1: Fundamentos y Herramientas",
+        title: "Módulo 1: Bienvenida",
         content: [
-            "Bienvenida al curso y metodología",
-            "Materiales e instrumentos base",
-            "Seguridad e higiene en el taller",
-            "Tipos de resina y cómo elegir la correcta"
+            "Bienvenida al curso y cómo aprovecharlo",
+            "Qué vas a aprender (ruta rápida)",
+            "Información importante",
+            "Cómo conseguir la guía del curso",
+            "Comunidad y recomendaciones iniciales",
+            "Cómo obtener el certificado"
         ]
     },
     {
-        title: "Módulo 2: La Mezcla Perfecta",
+        title: "Módulo 2: Bioseguridad y preparación del espacio",
         content: [
-            "Proporciones exactas (A:B)",
-            "Técnicas para eliminar burbujas",
-            "Colorimetría con pigmentos",
-            "Tiempos de trabajo y curado"
+            "Equipos de protección personal (EPP)",
+            "Preparación de mesa y superficies",
+            "Ventilación y seguridad en casa",
+            "Manipulación segura de químicos",
+            "Almacenamiento correcto de resina y aditivos"
         ]
     },
     {
-        title: "Módulo 3: Joyería en Resina",
+        title: "Módulo 3: Herramientas y materiales esenciales",
         content: [
-            "Preparación de moldes de silicona",
-            "Encapsulado de flores y elementos",
-            "Uso de pan de oro y glitter",
-            "Llaveros y dijes profesionales"
+            "Herramientas básicas indispensables",
+            "Materiales esenciales para empezar",
+            "Kit económico vs kit recomendado",
+            "Checklist de compra para iniciar"
         ]
     },
     {
-        title: "Módulo 4: Arte en Gran Formato",
+        title: "Módulo 4: Conociendo la resina (sin enredos)",
         content: [
-            "Cuadros de resina fluida",
-            "Efecto células y ondas de mar",
-            "Preparación de soportes (MADERA/MDF)",
-            "Mesas de río: Teoría y Práctica"
+            "Componentes de la resina: A y B",
+            "Tipos de resina y usos más comunes",
+            "Epóxica vs UV vs poliéster (diferencias clave)",
+            "Qué resina elegir según el proyecto",
+            "Errores típicos al elegir resina"
         ]
     },
     {
-        title: "Módulo 5: Acabados y Pulido",
+        title: "Módulo 5: Medición, mezcla y curado correcto",
         content: [
-            "Lijado manual y mecánico",
-            "Técnicas de pulido tipo espejo",
-            "Domo de protección final",
-            "Limpieza y conservación"
+            "Proporciones: cómo medir sin fallar",
+            "Tiempo de trabajo (pot life) explicado fácil",
+            "Curado: etapas y qué esperar",
+            "Temperatura y ambiente ideal",
+            "Cómo preparar tu mezcla \"consciente\"",
+            "Reglas de oro para mezclar (sin contaminar)"
         ]
     },
     {
-        title: "Módulo 6: Marketing para Artesanas",
+        title: "Módulo 6: Pigmentos, colorantes y efectos (nivel venta)",
         content: [
-            "Creación de marca personal",
-            "Psicología del color para vender",
-            "Cómo poner precio a tus piezas",
-            "Calendario de lanzamientos"
+            "Pigmentos y aditivos: cuáles usar",
+            "Glitter: cómo usarlo sin que se hunda",
+            "Efectos y texturas simples, pero pro",
+            "Composición y equilibrio visual (3 reglas)",
+            "Cómo combinar colores para que se vea \"premium\""
         ]
     },
     {
-        title: "Módulo 7: Fotografía de Producto",
+        title: "Módulo 7: Resina sin errores (acabados limpios)",
         content: [
-            "Iluminación para resina (sin reflejos)",
-            "Edición profesional desde el móvil",
-            "Props y escenografía minimalista",
-            "Videos que atraen clientes"
+            "Burbujas: por qué aparecen",
+            "Cómo evitar burbujas desde la mezcla",
+            "Uso correcto del calor (sin arruinar la pieza)",
+            "Control del ambiente (humedad/temperatura)",
+            "Técnicas de asentado de la resina",
+            "Mini guía de solución rápida de fallas comunes"
         ]
     },
     {
-        title: "Módulo 8: Ventas en Redes Sociales",
+        title: "Módulo 8: Moldes, desmolde y acabados base",
         content: [
-            "Estrategias en Instagram y TikTok",
-            "Copywriting para vender sin esfuerzo",
-            "Atención al cliente efectiva",
-            "Cierre de ventas por WhatsApp"
+            "Preparación y cuidado de moldes",
+            "Tipos de moldes y cuál elegir",
+            "Técnica de vertido limpio",
+            "Desmolde correcto sin romper piezas",
+            "Acabados básicos post desmolde (nivel inicial)"
         ]
     },
     {
-        title: "Módulo 9: Empaque y Envíos",
+        title: "Módulo 9: Personalización creativa (que se vende sola)",
         content: [
-            "Packaging premium de bajo costo",
-            "Logística de envíos nacionales e internacionales",
-            "Experiencia de unboxing inolvidable",
-            "Políticas de cambios y devoluciones"
+            "Introducción a personalización en resina",
+            "Inserción de letras y elementos planos",
+            "Uso de flores secas y elementos naturales",
+            "Curado y evaluación final (control de calidad)",
+            "Cómo hacer que la pieza \"se vea cara\" (detalles)"
         ]
     },
     {
-        title: "Módulo 10: Mentalidad Emprendedora",
+        title: "Módulo 10: Proyectos vendibles paso a paso",
         content: [
-            "Superando el miedo a vender",
-            "Organización del tiempo y taller",
-            "Escalando tu negocio de resina",
-            "Comunidad y apoyo continuo"
+            "Llavero letra con encapsulado de flores",
+            "Llavero letra con glitter",
+            "Llavero mini letras (última tendencia)",
+            "Llavero con base de acrílico",
+            "Llavero con borde redondo",
+            "Llavero con borde irregular"
+        ]
+    },
+    {
+        title: "Módulo 11: Joyería inicial",
+        content: [
+            "Collar con dijes de resina",
+            "Aretes de resina",
+            "Sets combinables y comerciales"
+        ]
+    },
+    {
+        title: "Módulo 12: Próximos pasos",
+        content: [
+            "Cómo llevar esto al siguiente nivel",
+            "Despedida"
         ]
     }
 ];
@@ -103,7 +131,7 @@ const Curriculum = () => {
             <div className="max-w-4xl mx-auto flex flex-col items-center">
                 <div className="text-center mb-16">
                     <ShinyText text="TU CAMINO HACIA LA MAESTRÍA" className="text-primary font-bold tracking-widest text-sm mb-4" />
-                    <h2 className="text-4xl md:text-6xl font-black text-white italic">En Resina Master Pro aprenderás</h2>
+                    <h2 className="text-4xl md:text-6xl font-black text-white italic">En Resina Express aprenderás</h2>
                 </div>
 
                 <AnimatedList

@@ -39,7 +39,7 @@ const Recap = () => {
                                 <div>
                                     <div className="h-1 w-full bg-primary mb-6" />
                                     <h4 className="text-3xl font-black text-white italic leading-none mb-2">RESINA</h4>
-                                    <h4 className="text-5xl font-black text-primary italic leading-none">MASTER PRO</h4>
+                                    <h4 className="text-5xl font-black text-primary italic leading-none">EXPRESS</h4>
                                 </div>
 
                                 <div className="space-y-4">
@@ -74,7 +74,7 @@ const Recap = () => {
                     <div className="order-1 lg:order-2">
                         <div className="mb-10">
                             <p className="text-gray-400 text-lg md:text-xl leading-relaxed">
-                                <span className="text-white font-black">Resina Master Pro</span> es el programa más completo del mercado con el que podrás afianzar tus conocimientos y emprender en el área de la <span className="text-primary italic font-bold">Resina Epóxica</span>.
+                                <span className="text-white font-black">Resina Express</span> es el programa más completo del mercado con el que podrás afianzar tus conocimientos y emprender en el área de la <span className="text-primary italic font-bold">Resina Epóxica</span>.
                             </p>
                         </div>
 
