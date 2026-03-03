@@ -23,12 +23,12 @@ const Hero = () => {
                 <img
                     src={bgMobile}
                     alt="Background Mobile"
-                    className="block md:hidden w-full h-full object-cover opacity-100 scale-100 object-[48%_center]"
+                    className="block md:hidden w-full h-[65vh] object-cover opacity-100 object-[center_top]"
                 />
 
                 {/* Degradados de oscurecimiento */}
                 <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent hidden md:block" />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black md:hidden" />
+                <div className="absolute top-0 w-full h-[65vh] bg-gradient-to-t from-black via-transparent to-black/30 md:hidden z-10" />
 
                 {/* Capa de Solape (Sujeto con iluminación original) - Desktop */}
                 <img
@@ -40,20 +40,20 @@ const Hero = () => {
                 <img
                     src={celImg}
                     alt="Sujeto Solape Mobile"
-                    className="absolute inset-0 w-full h-full object-cover z-10 scale-100 pointer-events-none block md:hidden object-[48%_center]"
+                    className="absolute top-0 w-full h-[65vh] object-cover z-10 pointer-events-none block md:hidden object-[center_top]"
                 />
             </div>
 
             <div className="relative z-10 max-w-7xl w-full flex flex-col md:flex-row items-center md:items-end justify-between gap-12 h-full">
 
                 {/* Bloque Izquierdo: Información */}
-                <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left max-w-2xl md:mb-48 w-full mt-40 md:mt-0">
+                <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left max-w-2xl md:mb-48 w-full mt-[50vh] sm:mt-40 md:mt-0 relative z-20 px-2">
 
                     <div className="mb-8 w-full">
                         <div className="flex justify-center md:justify-start">
                             <SplitText
-                                text="DOMINA EL ARTE DE LA RESINA"
-                                className="text-lg md:text-3xl lg:text-4xl font-black text-white leading-[0.85] tracking-tighter mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] md:drop-shadow-none"
+                                text="Tu inicio rapido y rentable"
+                                className="text-base md:text-2xl lg:text-3xl font-bold text-white tracking-tight leading-snug mb-4 drop-shadow-md md:drop-shadow-none"
                             />
                         </div>
                         <div className="h-1 w-32 bg-primary mb-6 shadow-[0_0_15px_rgba(0,255,187,0.5)] mx-auto md:mx-0" />
@@ -71,9 +71,9 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
-                        className="text-white/90 md:text-gray-300 text-lg md:text-xl lg:text-2xl mb-12 leading-relaxed font-bold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] md:drop-shadow-none"
+                        className="text-white/90 md:text-gray-200 text-sm md:text-lg lg:text-xl mb-10 leading-relaxed font-medium drop-shadow-md md:drop-shadow-none max-w-lg"
                     >
-                        Aprende el método exacto para facturar con piezas exclusivas, <span className="text-white underline decoration-primary decoration-4 underline-offset-8">desde cero</span> y vive de tu pasión creativa.
+                        Domina la técnica, crea productos rentables y genera tus primeras ganancias en menos de 15 días con un método diseñado para emprender en este maravilloso mundo de la resina.
                     </motion.p>
 
                     <div className="flex flex-col sm:flex-row gap-6 items-center">
@@ -81,7 +81,7 @@ const Hero = () => {
                             <motion.button
                                 whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(0, 255, 187, 0.5)" }}
                                 whileTap={{ scale: 0.95 }}
-                                className="relative group px-12 py-6 bg-primary text-black font-black text-xl rounded-xl overflow-hidden transition-all cursor-target flex items-center gap-3"
+                                className="relative group px-10 py-5 bg-primary text-black font-bold text-lg md:text-xl rounded-xl overflow-hidden transition-all cursor-target flex items-center gap-3"
                             >
                                 <span className="relative z-10 uppercase tracking-tight">QUIERO PARTICIPAR</span>
                                 <Zap className="w-5 h-5 fill-black" />
