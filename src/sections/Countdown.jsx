@@ -77,12 +77,12 @@ const Countdown = () => {
                 </motion.button>
 
                 {/* Logos de Pago */}
-                <div className="flex flex-wrap justify-center gap-3 md:gap-6 mb-16 opacity-80 backdrop-blur-sm bg-white/5 p-4 rounded-2xl border border-white/10 relative z-10">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" className="h-4 md:h-5 brightness-0 invert" alt="Visa" />
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" className="h-6 md:h-8" alt="Mastercard" />
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" className="h-4 md:h-6 brightness-0 invert" alt="PayPal" />
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_Pay_logo.svg" className="h-4 md:h-6 brightness-0 invert" alt="Apple Pay" />
-                    <img src="https://cryptologos.cc/logos/binance-coin-bnb-logo.svg" className="h-4 md:h-6" alt="Binance" />
+                <div className="flex flex-wrap justify-center gap-3 md:gap-8 mb-16 opacity-90 backdrop-blur-sm bg-white/5 p-5 rounded-2xl border border-white/10 relative z-10">
+                    <img src="/Bank Transfers & Card Networks.svg" className="h-6 md:h-8" alt="Visa" />
+                    <img src="/Bank Transfers & Card Networks-1.svg" className="h-6 md:h-8" alt="Mastercard" />
+                    <img src="/Global Payment Gateways.svg" className="h-6 md:h-8" alt="PayPal" />
+                    <img src="/Digital Wallets.svg" className="h-6 md:h-8" alt="Apple Pay" />
+                    <img src="/Crypto & Web3 Payments.svg" className="h-6 md:h-8" alt="Binance" />
                 </div>
 
                 {/* Contador */}

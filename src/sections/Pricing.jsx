@@ -67,12 +67,12 @@ const Pricing = () => {
                                     </motion.button>
 
                                     {/* Logos de Pago */}
-                                    <div className="flex flex-wrap justify-center gap-4 mt-8 opacity-90 scale-90">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" className="h-5 w-auto brightness-0" alt="Visa" />
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" className="h-8 w-auto" alt="Mastercard" />
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" className="h-6 w-auto brightness-0" alt="PayPal" />
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_Pay_logo.svg" className="h-6 w-auto brightness-0" alt="Apple Pay" />
-                                        <img src="https://cryptologos.cc/logos/binance-coin-bnb-logo.svg" className="h-6 w-auto opacity-70" alt="Binance" />
+                                    <div className="flex flex-wrap justify-center gap-6 mt-8 opacity-90 scale-90">
+                                        <img src="/Bank Transfers & Card Networks.svg" className="h-8 w-auto" alt="Visa" />
+                                        <img src="/Bank Transfers & Card Networks-1.svg" className="h-8 w-auto" alt="Mastercard" />
+                                        <img src="/Global Payment Gateways.svg" className="h-8 w-auto" alt="PayPal" />
+                                        <img src="/Digital Wallets.svg" className="h-8 w-auto" alt="Apple Pay" />
+                                        <img src="/Crypto & Web3 Payments.svg" className="h-8 w-auto" alt="Binance" />
                                     </div>
                                 </div>
                             </div>

@@ -4,6 +4,11 @@ import { CheckCircle2 } from 'lucide-react';
 import GradientText from '../components/react-bits/GradientText';
 import Magnet from '../components/react-bits/Magnet';
 
+// Importar imágenes locales
+import trabajo1 from '../assets/trabajos_Recina (1).jpg';
+import trabajo2 from '../assets/trabajos_Recina (2).jpg';
+import trabajo3 from '../assets/trabajos_Recina (3).jpg';
+
 const Methodology = () => {
     const points = [
         "El curso es online y puedes verlo desde tu celular, tablet o computadora las veces que necesites 24/7. Incluso sin internet.",
@@ -49,15 +54,10 @@ const Methodology = () => {
                             >
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
                                 <img
-                                    src="https://images.unsplash.com/photo-1599707334706-a72a68b60384?auto=format&fit=crop&q=80&w=800"
+                                    src={trabajo2}
                                     alt="Arte en Resina Profundo"
-                                    className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+                                    className="w-full h-full object-cover transition-all duration-700 scale-105 group-hover:scale-100"
                                 />
-                                <div className="absolute bottom-8 left-8 z-20">
-                                    <span className="bg-primary/90 text-black px-5 py-2 rounded-full text-xs font-black uppercase tracking-[0.2em] shadow-lg">
-                                        Acabado Profesional
-                                    </span>
-                                </div>
                             </motion.div>
 
                             {/* Imagen Superior Derecha */}
@@ -68,9 +68,9 @@ const Methodology = () => {
                                 className="rounded-[2.5rem] overflow-hidden border border-white/20 relative group bg-gray-900 h-full"
                             >
                                 <img
-                                    src="https://images.unsplash.com/photo-1610444583737-9f13fc34b106?auto=format&fit=crop&q=80&w=600"
+                                    src={trabajo3}
                                     alt="Joyería de Lujo"
-                                    className="w-full h-full object-cover grayscale-[0.3] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 hover:scale-110"
+                                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 hover:scale-110"
                                 />
                             </motion.div>
 
@@ -82,9 +82,9 @@ const Methodology = () => {
                                 className="rounded-[2.5rem] overflow-hidden border border-white/20 relative group bg-gray-900 h-full"
                             >
                                 <img
-                                    src="https://images.unsplash.com/photo-1541944112521-72993952174c?auto=format&fit=crop&q=80&w=600"
+                                    src={trabajo1}
                                     alt="Mesa de Resina Arte"
-                                    className="w-full h-full object-cover grayscale-[0.3] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 hover:scale-110"
+                                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 hover:scale-110"
                                 />
                             </motion.div>
                         </div>
