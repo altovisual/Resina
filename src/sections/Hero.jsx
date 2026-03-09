@@ -49,23 +49,23 @@ const Hero = () => {
                 {/* Bloque Izquierdo: Información */}
                 <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left max-w-2xl md:mb-48 w-full mt-[50vh] sm:mt-40 md:mt-0 relative z-20 px-2">
 
-                    <div className="mb-8 w-full">
-                        <div className="flex justify-center md:justify-start">
-                            <SplitText
-                                text="Tu inicio rapido y rentable"
-                                className="text-base md:text-2xl lg:text-3xl font-bold text-white tracking-tight leading-snug mb-4 drop-shadow-md md:drop-shadow-none"
-                            />
-                        </div>
-                        <div className="h-1 w-32 bg-primary mb-6 shadow-[0_0_15px_rgba(0,255,187,0.5)] mx-auto md:mx-0" />
-                        <GradientText
-                            colors={["#ffffff", "#00FFBB", "#00CC96", "#00FFBB", "#ffffff"]}
-                            animationSpeed={6}
-                            showBorder={false}
-                            className="text-4xl md:text-6xl lg:text-8xl font-black italic uppercase tracking-tighter block drop-shadow-[0_4px_6px_rgba(0,0,0,0.9)] md:drop-shadow-none"
-                        >
-                            Resina Express
-                        </GradientText>
+                    <GradientText
+                        colors={["#ffffff", "#00FFBB", "#00CC96", "#00FFBB", "#ffffff"]}
+                        animationSpeed={6}
+                        showBorder={false}
+                        className="text-4xl md:text-6xl lg:text-8xl font-black italic uppercase tracking-tighter block drop-shadow-[0_4px_6px_rgba(0,0,0,0.9)] md:drop-shadow-none"
+                    >
+                        Resina Express
+                    </GradientText>
+
+                    <div className="flex justify-center md:justify-start mt-4">
+                        <SplitText
+                            text="Tu inicio rapido y rentable"
+                            className="text-base md:text-2xl lg:text-3xl font-bold text-white tracking-tight leading-snug mb-4 drop-shadow-md md:drop-shadow-none"
+                        />
                     </div>
+
+                    <div className="h-1 w-32 bg-primary mb-6 shadow-[0_0_15px_rgba(0,255,187,0.5)] mx-auto md:mx-0" />
 
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -78,7 +78,10 @@ const Hero = () => {
 
                     <div className="flex flex-col sm:flex-row gap-6 items-center">
                         <Magnet padding={50} strength={3}>
-                            <motion.button
+                            <motion.a
+                                href="https://pay.hotmart.com/J104562709T"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(0, 255, 187, 0.5)" }}
                                 whileTap={{ scale: 0.95 }}
                                 className="relative group px-10 py-5 bg-primary text-black font-bold text-lg md:text-xl rounded-xl overflow-hidden transition-all cursor-target flex items-center gap-3"
@@ -86,9 +89,8 @@ const Hero = () => {
                                 <span className="relative z-10 uppercase tracking-tight">QUIERO PARTICIPAR</span>
                                 <Zap className="w-5 h-5 fill-black" />
                                 <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity" />
-                            </motion.button>
+                            </motion.a>
                         </Magnet>
-
                     </div>
                 </div>
 

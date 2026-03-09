@@ -1,9 +1,41 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { CheckCircle2, Package, Layers, ShieldCheck } from 'lucide-react';
+import React, { useRef } from 'react';
+import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { CheckCircle2, ShieldCheck } from 'lucide-react';
 import GradientText from '../components/react-bits/GradientText';
+import bono1 from '../assets/BONO1 RESINA.png';
+import bono2 from '../assets/BONO2 RESINA.png';
+import bono3 from '../assets/BONO3 RESINA.png';
 
 const Recap = () => {
+    // Variables para el efecto de Tilt 3D
+    const ref = useRef(null);
+    const x = useMotionValue(0);
+    const y = useMotionValue(0);
+
+    const mouseXSpring = useSpring(x, { stiffness: 300, damping: 30 });
+    const mouseYSpring = useSpring(y, { stiffness: 300, damping: 30 });
+
+    const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["15deg", "-15deg"]);
+    const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-15deg", "15deg"]);
+
+    const handleMouseMove = (e) => {
+        if (!ref.current) return;
+        const rect = ref.current.getBoundingClientRect();
+        const width = rect.width;
+        const height = rect.height;
+        const mouseX = e.clientX - rect.left;
+        const mouseY = e.clientY - rect.top;
+        const xPct = mouseX / width - 0.5;
+        const yPct = mouseY / height - 0.5;
+        x.set(xPct);
+        y.set(yPct);
+    };
+
+    const handleMouseLeave = () => {
+        x.set(0);
+        y.set(0);
+    };
+
     const points = [
         "Aprenderás a tu propio ritmo, sin presiones y en tan solo 15 días obtendrás resultados increíbles.",
         "Nuestro programa cuenta con 58 clases para que logres el objetivo de ser una experta en el mundo de la resina epóxica.",
@@ -26,47 +58,65 @@ const Recap = () => {
                     {/* Visual de Bundle (Representación de cajas) */}
                     <div className="relative order-2 lg:order-1 flex justify-center">
                         <div className="relative w-full max-w-sm aspect-[4/5] perspective-1000">
-                            {/* Caja Principal Mockup (Simulada con CSS) */}
+                            {/* Imagen Principal (Rotación Interactiva 3D Únicamente) */}
                             <motion.div
-                                initial={{ rotateY: -20, rotateX: 5 }}
-                                whileHover={{ rotateY: -10, rotateX: 0 }}
-                                className="w-full h-full bg-gradient-to-br from-gray-900 to-black border-2 border-primary/30 rounded-3xl shadow-[0_0_50px_rgba(0,255,187,0.1)] p-8 flex flex-col justify-between relative overflow-hidden"
+                                ref={ref}
+                                onMouseMove={handleMouseMove}
+                                onMouseLeave={handleMouseLeave}
+                                style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
+                                className="w-full h-full relative cursor-pointer"
                             >
-                                <div className="absolute top-0 right-0 p-4 opacity-5">
-                                    <Package size={200} className="text-white" />
-                                </div>
-
-                                <div>
-                                    <div className="h-1 w-full bg-primary mb-6" />
-                                    <h4 className="text-3xl font-black text-white italic leading-none mb-2">RESINA</h4>
-                                    <h4 className="text-5xl font-black text-primary italic leading-none">EXPRESS</h4>
-                                </div>
-
-                                <div className="space-y-4">
-                                    <div className="flex items-center gap-3 text-white/50 text-sm italic font-bold">
-                                        <Layers size={20} />
-                                        12 MÓDULOS, 58 CLASES + 3 BONOS
-                                    </div>
-                                    <div className="bg-primary/10 border border-primary/20 p-4 rounded-xl text-primary text-xs font-black uppercase tracking-widest text-center">
-                                        Acceso de por vida
-                                    </div>
-                                </div>
+                                {/* Cara Frontal */}
+                                <img
+                                    src="/Resina Express (1).jpg.jpeg"
+                                    alt="Resina Express Frontal"
+                                    className="absolute inset-0 w-full h-full object-cover rounded-3xl shadow-[0_0_50px_rgba(0,255,187,0.2)]"
+                                    style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
+                                />
                             </motion.div>
 
-                            {/* Cajas de Bonos Superpuestas */}
-                            <motion.div
-                                initial={{ x: 60, y: 40, rotate: 5 }}
-                                animate={{ x: 40, y: 80, rotate: 10 }}
-                                className="absolute -bottom-10 -right-10 w-48 h-56 bg-gradient-to-br from-primary to-blue-500 rounded-2xl p-4 shadow-2xl flex flex-col justify-between"
-                            >
-                                <div className="bg-black/20 w-8 h-8 rounded-lg flex items-center justify-center">
-                                    <CheckCircle2 size={16} className="text-white" />
+                            {/* Cajas de Bonos Superpuestas (Organizadas en Fila) */}
+                            <div className="absolute -bottom-16 md:-bottom-24 left-1/2 -translate-x-1/2 w-[120%] flex flex-col items-center z-20">
+                                {/* Etiqueta identificativa de Bonos */}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 10 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.3 }}
+                                    viewport={{ once: true }}
+                                    className="bg-primary text-black px-4 py-1.5 rounded-full text-[10px] md:text-xs font-black uppercase tracking-widest shadow-[0_4px_10px_rgba(0,0,0,0.5)] border border-primary/50 z-30 relative top-4 md:top-8"
+                                >
+                                    + 3 Bonos Gratis
+                                </motion.div>
+
+                                <div className="flex flex-row justify-center items-end gap-2 sm:gap-4 w-full">
+                                    <motion.img
+                                        src={bono1}
+                                        alt="Bono 1"
+                                        initial={{ y: 50, opacity: 0, rotate: -10 }}
+                                        whileInView={{ y: 0, opacity: 1, rotate: -5 }}
+                                        viewport={{ once: true }}
+                                        className="w-[30%] sm:w-32 rounded-xl shadow-2xl border border-white/10"
+                                    />
+                                    <motion.img
+                                        src={bono3}
+                                        alt="Bono 3"
+                                        initial={{ y: 50, opacity: 0 }}
+                                        whileInView={{ y: 0, opacity: 1, rotate: 2 }}
+                                        transition={{ delay: 0.1 }}
+                                        viewport={{ once: true }}
+                                        className="w-[20%] sm:w-24 rounded-lg shadow-xl border border-white/10 relative top-4 z-0"
+                                    />
+                                    <motion.img
+                                        src={bono2}
+                                        alt="Bono 2"
+                                        initial={{ y: 50, opacity: 0, rotate: 10 }}
+                                        whileInView={{ y: 0, opacity: 1, rotate: 5 }}
+                                        transition={{ delay: 0.2 }}
+                                        viewport={{ once: true }}
+                                        className="w-[30%] sm:w-32 rounded-xl shadow-2xl border border-white/10 z-10"
+                                    />
                                 </div>
-                                <div className="text-black font-black leading-tight uppercase">
-                                    <span className="text-[10px] block opacity-60">BONO EXCLUSIVO</span>
-                                    CÓMO CALCULAR Y VENDER
-                                </div>
-                            </motion.div>
+                            </div>
                         </div>
                     </div>
 

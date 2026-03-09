@@ -57,14 +57,17 @@ const Pricing = () => {
                                         Oferta válida por pocos días
                                     </p>
 
-                                    <motion.button
+                                    <motion.a
+                                        href="https://pay.hotmart.com/J104562709T"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
                                         className="w-full bg-black text-white py-6 rounded-2xl font-black text-lg md:text-xl mb-4 shadow-xl hover:shadow-black/40 transition-all uppercase tracking-tight flex flex-col items-center justify-center leading-none"
                                     >
                                         ¡QUIERO ENTRAR AHORA MISMO!
                                         <span className="text-[10px] mt-2 font-light tracking-widest text-white/50 underline">CLIC AQUÍ</span>
-                                    </motion.button>
+                                    </motion.a>
 
                                     {/* Logos de Pago */}
                                     <div className="flex flex-wrap justify-center gap-6 mt-8 opacity-90 scale-90">

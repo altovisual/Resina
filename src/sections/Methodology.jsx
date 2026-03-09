@@ -112,14 +112,17 @@ const Methodology = () => {
                         {/* Botón CTA (Basado en el estilo de Hero.jsx) */}
                         <div className="mt-12 flex justify-center lg:justify-start">
                             <Magnet padding={50} strength={3}>
-                                <motion.button
+                                <motion.a
+                                    href="https://pay.hotmart.com/J104562709T"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
-                                    className="relative group px-10 py-5 bg-white text-black font-bold text-xl rounded-full shadow-[0_0_20px_rgba(255,255,255,0.3)] overflow-hidden transition-all cursor-target"
+                                    className="relative group px-10 py-5 bg-white text-black font-bold text-xl rounded-full shadow-[0_0_20px_rgba(255,255,255,0.3)] overflow-hidden transition-all cursor-target flex items-center justify-center"
                                 >
                                     <span className="relative z-10 uppercase">¡Quiero entrar ahora mismo!</span>
                                     <div className="absolute inset-0 bg-primary opacity-0 group-hover:opacity-100 transition-opacity" />
-                                </motion.button>
+                                </motion.a>
                             </Magnet>
                         </div>
                     </div>

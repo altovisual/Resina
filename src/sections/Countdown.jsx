@@ -67,14 +67,17 @@ const Countdown = () => {
                     Oferta válida por 12 horas
                 </p>
 
-                <motion.button
+                <motion.a
+                    href="https://pay.hotmart.com/J104562709T"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-full max-w-md bg-gradient-to-r from-primary to-blue-500 text-black py-5 rounded-2xl font-black text-lg md:text-xl mb-6 shadow-xl shadow-primary/20 transition-all uppercase tracking-tight relative z-10"
+                    className="w-full max-w-md mx-auto flex flex-col items-center justify-center bg-gradient-to-r from-primary to-blue-500 text-black py-5 rounded-2xl font-black text-lg md:text-xl mb-6 shadow-xl shadow-primary/20 transition-all uppercase tracking-tight relative z-10"
                 >
                     ¡QUIERO ENTRAR AHORA MISMO!
                     <span className="block text-[10px] opacity-70 font-normal tracking-widest mt-1">CLIC AQUÍ</span>
-                </motion.button>
+                </motion.a>
 
                 {/* Logos de Pago */}
                 <div className="flex flex-wrap justify-center gap-3 md:gap-8 mb-16 opacity-90 backdrop-blur-sm bg-white/5 p-5 rounded-2xl border border-white/10 relative z-10">
