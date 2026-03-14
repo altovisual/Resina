@@ -23,7 +23,7 @@ const Pricing = () => {
                             {/* Brillo exterior decorativo */}
                             <div className="absolute -inset-1 bg-gradient-to-r from-primary to-blue-500 rounded-[2.5rem] blur opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
 
-                            <div className="relative bg-primary rounded-[2.5rem] p-8 md:p-12 text-black shadow-2xl overflow-hidden">
+                            <div className="relative bg-primary rounded-[2.5rem] p-8 md:p-12 text-slate-950 shadow-2xl overflow-hidden">
                                 {/* Patrón de fondo sutil */}
                                 <div className="absolute top-0 right-0 p-4 opacity-10">
                                     <Zap size={120} className="text-black rotate-12" />
@@ -31,18 +31,18 @@ const Pricing = () => {
 
                                 <div className="flex flex-col items-center text-center">
                                     <div className="mb-6 flex items-center gap-2">
-                                        <div className="bg-black/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-black/20 text-xs font-black tracking-[0.2em] uppercase">
+                                        <div className="bg-slate-950/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-slate-950/20 text-xs font-black tracking-[0.2em] uppercase">
                                             ¡OFERTA EXCLUSIVA!
                                         </div>
                                     </div>
 
                                     <h3 className="text-xl md:text-2xl font-bold mb-4 leading-tight">
                                         OBTÉN ACCESO A NUESTRO CURSO <br />
-                                        <span className="text-black/60 uppercase">PARA TODA LA VIDA</span>
+                                        <span className="text-slate-950/60 uppercase">PARA TODA LA VIDA</span>
                                     </h3>
 
                                     <div className="mb-2">
-                                        <span className="text-black/40 line-through text-lg md:text-xl font-medium decoration-black/30 decoration-2">
+                                        <span className="text-slate-950/40 line-through text-lg md:text-xl font-medium decoration-slate-950/30 decoration-2">
                                             Antes $672 USD
                                         </span>
                                     </div>
@@ -53,7 +53,7 @@ const Pricing = () => {
                                         <span className="text-xl md:text-2xl font-bold self-end mb-2 ml-2">USD</span>
                                     </div>
 
-                                    <p className="text-black/70 font-bold mb-10 italic">
+                                    <p className="text-slate-950/70 font-bold mb-10 italic">
                                         Oferta válida por pocos días
                                     </p>
 
@@ -63,10 +63,10 @@ const Pricing = () => {
                                         rel="noopener noreferrer"
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
-                                        className="w-full bg-black text-white py-6 rounded-2xl font-black text-lg md:text-xl mb-4 shadow-xl hover:shadow-black/40 transition-all uppercase tracking-tight flex flex-col items-center justify-center leading-none"
+                                        className="w-full bg-gradient-to-r from-yellow-400 to-yellow-600 text-black py-6 rounded-2xl font-black text-lg md:text-xl mb-4 shadow-xl hover:shadow-yellow-500/40 transition-all uppercase tracking-tight flex flex-col items-center justify-center leading-none"
                                     >
                                         ¡QUIERO ENTRAR AHORA MISMO!
-                                        <span className="text-[10px] mt-2 font-light tracking-widest text-white/50 underline">CLIC AQUÍ</span>
+                                        <span className="text-[10px] mt-2 font-black tracking-widest text-black/60 underline">CLIC AQUÍ</span>
                                     </motion.a>
 
                                     {/* Logos de Pago */}

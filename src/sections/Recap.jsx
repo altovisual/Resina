@@ -57,26 +57,26 @@ const Recap = () => {
 
                     {/* Visual de Bundle (Representación de cajas) */}
                     <div className="relative order-2 lg:order-1 flex justify-center">
-                        <div className="relative w-full max-w-sm aspect-[4/5] perspective-1000">
+                        <div className="relative w-full max-w-md perspective-1000 mb-20 md:mb-0">
                             {/* Imagen Principal (Rotación Interactiva 3D Únicamente) */}
                             <motion.div
                                 ref={ref}
                                 onMouseMove={handleMouseMove}
                                 onMouseLeave={handleMouseLeave}
                                 style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
-                                className="w-full h-full relative cursor-pointer"
+                                className="w-full relative cursor-pointer"
                             >
                                 {/* Cara Frontal */}
                                 <img
                                     src="/Resina Express (1).jpg.jpeg"
                                     alt="Resina Express Frontal"
-                                    className="absolute inset-0 w-full h-full object-cover rounded-3xl shadow-[0_0_50px_rgba(0,255,187,0.2)]"
+                                    className="w-full h-auto object-cover rounded-3xl shadow-[0_0_50px_rgba(0,255,187,0.2)]"
                                     style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
                                 />
                             </motion.div>
 
                             {/* Cajas de Bonos Superpuestas (Organizadas en Fila) */}
-                            <div className="absolute -bottom-16 md:-bottom-24 left-1/2 -translate-x-1/2 w-[120%] flex flex-col items-center z-20">
+                            <div className="absolute -bottom-28 sm:-bottom-32 md:-bottom-24 left-1/2 -translate-x-1/2 w-[120%] flex flex-col items-center z-20">
                                 {/* Etiqueta identificativa de Bonos */}
                                 <motion.div
                                     initial={{ opacity: 0, y: 10 }}

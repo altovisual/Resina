@@ -73,7 +73,7 @@ const Countdown = () => {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-full max-w-md mx-auto flex flex-col items-center justify-center bg-gradient-to-r from-primary to-blue-500 text-black py-5 rounded-2xl font-black text-lg md:text-xl mb-6 shadow-xl shadow-primary/20 transition-all uppercase tracking-tight relative z-10"
+                    className="w-full max-w-md mx-auto flex flex-col items-center justify-center bg-gradient-to-r from-yellow-400 to-yellow-600 text-black py-5 rounded-2xl font-black text-lg md:text-xl mb-6 shadow-xl shadow-yellow-500/20 hover:shadow-yellow-500/40 transition-all uppercase tracking-tight relative z-10"
                 >
                     ¡QUIERO ENTRAR AHORA MISMO!
                     <span className="block text-[10px] opacity-70 font-normal tracking-widest mt-1">CLIC AQUÍ</span>

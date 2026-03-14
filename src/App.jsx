@@ -10,6 +10,7 @@ import Recap from './sections/Recap'
 import Countdown from './sections/Countdown'
 import FAQ from './sections/FAQ'
 import Footer from './sections/Footer'
+import Portfolio from './sections/Portfolio'
 import GradualBlur from './components/react-bits/GradualBlur'
 import Noise from './components/react-bits/Noise'
 import TargetCursor from './components/react-bits/TargetCursor'
@@ -46,6 +47,7 @@ function App() {
         <Methodology />
         <Curriculum />
         <Instructor />
+        <Portfolio />
         <Pricing />
         <Bonuses />
         <Recap />

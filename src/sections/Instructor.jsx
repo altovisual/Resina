@@ -35,7 +35,7 @@ const Instructor = () => {
                     </h2>
                     <div className="text-gray-400 text-lg mb-8 leading-relaxed space-y-4">
                         <p>
-                            Soy Andrea Bolívar, artista de resina epóxica con más de 6 años de experiencia. Lo que comenzó como curiosidad creativa se transformó en una marca, una tienda física y en una comunidad de más de 10.000 clientes a nivel nacional e internacional que hoy confían en mi trabajo.
+                            Soy Andrea Bolívar, artista de resina epóxica con más de 6 años de experiencia. Lo que comenzó como curiosidad creativa se transformó en una marca, una tienda física y en una comunidad de más de 5.000 clientes y 300 alumnos a nivel mundial que hoy confían en mi trabajo.
                         </p>
                         <p>
                             He trabajado desde lo micro hasta lo macro: desde piezas pequeñas cargadas de detalle, hasta proyectos de gran formato que exigen precisión, estructura y acabados impecables. Cada creación ha sido una lección, cada error un aprendizaje, y cada cliente una oportunidad para elevar mi estándar.
@@ -59,12 +59,12 @@ const Instructor = () => {
                             <div className="text-xs text-gray-500 uppercase tracking-widest mt-1">Años Exp.</div>
                         </div>
                         <div className="text-center">
-                            <div className="text-3xl font-bold text-primary">10K+</div>
+                            <div className="text-3xl font-bold text-primary">5K+</div>
                             <div className="text-xs text-gray-500 uppercase tracking-widest mt-1">Clientes</div>
                         </div>
                         <div className="text-center">
-                            <div className="text-3xl font-bold text-primary">100%</div>
-                            <div className="text-xs text-gray-500 uppercase tracking-widest mt-1">Práctico</div>
+                            <div className="text-3xl font-bold text-primary">300+</div>
+                            <div className="text-xs text-gray-500 uppercase tracking-widest mt-1">Alumnos Globales</div>
                         </div>
                     </div>
                 </motion.div>
