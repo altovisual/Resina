@@ -58,20 +58,30 @@ const Recap = () => {
                     {/* Visual de Bundle (Representación de cajas) */}
                     <div className="relative order-2 lg:order-1 flex justify-center">
                         <div className="relative w-full max-w-md perspective-1000 mb-20 md:mb-0">
-                            {/* Imagen Principal (Rotación Interactiva 3D Únicamente) */}
+                            {/* Imagen Principal y Portada (Rotación Interactiva 3D Únicamente) */}
                             <motion.div
                                 ref={ref}
                                 onMouseMove={handleMouseMove}
                                 onMouseLeave={handleMouseLeave}
                                 style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
-                                className="w-full relative cursor-pointer"
+                                className="w-full relative cursor-pointer flex justify-end pr-4 mb-12"
                             >
-                                {/* Cara Frontal */}
+                                {/* Portada del Curso (Fondo / Base para el tamaño) */}
+                                <img
+                                    src="/portada del curso.jpeg"
+                                    alt="Portada del Curso"
+                                    className="w-[85%] relative -mt-6 h-auto object-cover rounded-2xl md:rounded-3xl shadow-[0_0_50px_rgba(0,255,187,0.2)] z-0 border border-white/10"
+                                    style={{ transform: 'translateZ(-10px)' }}
+                                />
+
+                                {/* Certificado (Frente / Superpuesto) */}
                                 <img
                                     src="/Resina Express (1).jpg.jpeg"
-                                    alt="Resina Express Frontal"
-                                    className="w-full h-auto object-cover rounded-3xl shadow-[0_0_50px_rgba(0,255,187,0.2)]"
-                                    style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
+                                    alt="Resina Express Certificado"
+                                    className="absolute -bottom-12 -left-4 w-[55%] h-auto object-cover rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.9)] z-10 border border-white/20"
+                                    style={{ 
+                                        transform: 'translateZ(40px) rotate(-4deg)'
+                                    }}
                                 />
                             </motion.div>
 
